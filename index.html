@@ -1,6 +1,5 @@
 <script> function showAboutUs() {
   $(document.getElementById('main')).removeClass('visible');
-  // $(document.getElementById('download')).removeClass('visible');
   $(document.getElementById('about-us')).addClass('visible');
 }
 </script>
@@ -11,23 +10,9 @@
 }
 </script>
 
-<script> function showDownload() {
-  // $(document.getElementById('main')).removeClass('visible');
-  // $(document.getElementById('about-us')).removeClass('visible');
-  // $(document.getElementById('download')).addClass('visible');
-}
-</script>
-
-<script> function hideDownload() {
-  // $(document.getElementById('download')).removeClass('visible');
-  // $(document.getElementById('main')).addClass('visible');
-}
-</script>
-
 <script> function closeAll() {
   $(document.getElementById('main')).addClass('visible');
   $(document.getElementById('about-us')).removeClass('visible');
-  // $(document.getElementById('download')).removeClass('visible');
 }
 </script>
 
@@ -59,7 +44,7 @@
     <nav>
       <div>
         <button class="homeLink" onClick="closeAll()">
-          VERIFY</button>
+          Verify</button>
       </div>
       <div>
         <button class="open" onClick="showAboutUs()">
