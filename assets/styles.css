@@ -21,7 +21,6 @@ nav > button:hover {
   margin-left: 30px;
   font-family: 'Roboto Mono', sans-serif;
   font-size: 30px;
-  /*font-style: italic;*/
   font-weight: 900;
   transition: all 0.2s ease-in-out;
 }
