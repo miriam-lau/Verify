@@ -1,0 +1,40 @@
+/**/Lambda Request
+/**/In session.attributes.user.userId I replaced actual Id with 'ID'
+{
+  "session": {
+    "sessionId": "SessionId.0b645bed-19c1-443f-ad83-77d8600732ba",
+    "application": {
+      "applicationId": "amzn1.ask.skill.22f298ef-d300-421e-8e46-7dbca5396178"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.ID"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.e72693a4-9277-4e5d-9f7f-c0eb1cb29648",
+    "locale": "en-US",
+    "timestamp": "2017-06-07T17:12:53Z",
+    "intent": {
+      "name": "SetRemindMe",
+      "slots": {}
+    }
+  },
+  "version": "1.0"
+}
+
+/**/Lambda Response
+
+{
+  "version": "1.0",
+  "response": {
+    "outputSpeech": {
+      "type": "PlainText",
+      "text": "This is a set request"
+    },
+    "shouldEndSession": true
+  },
+  "sessionAttributes": {}
+}
