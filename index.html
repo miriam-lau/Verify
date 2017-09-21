@@ -1,0 +1,175 @@
+<script> function showAboutUs() {
+  $(document.getElementById('main')).removeClass('visible');
+  // $(document.getElementById('download')).removeClass('visible');
+  $(document.getElementById('about-us')).addClass('visible');
+}
+</script>
+
+<script> function hideAboutUs() {
+  $(document.getElementById('about-us')).removeClass('visible');
+  $(document.getElementById('main')).addClass('visible');
+}
+</script>
+
+<script> function showDownload() {
+  // $(document.getElementById('main')).removeClass('visible');
+  // $(document.getElementById('about-us')).removeClass('visible');
+  // $(document.getElementById('download')).addClass('visible');
+}
+</script>
+
+<script> function hideDownload() {
+  // $(document.getElementById('download')).removeClass('visible');
+  // $(document.getElementById('main')).addClass('visible');
+}
+</script>
+
+<script> function closeAll() {
+  $(document.getElementById('main')).addClass('visible');
+  $(document.getElementById('about-us')).removeClass('visible');
+  // $(document.getElementById('download')).removeClass('visible');
+}
+</script>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="./assets/favicon.png" />
+    <link rel="stylesheet" type="text/css"href="./assets/reset.css">
+    <link rel="stylesheet" type="text/css"href="./assets/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-100350356-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <title>Verify</title>
+  </head>
+
+  <body>
+    <nav>
+      <div>
+        <button class="homeLink" onClick="closeAll()">
+          VERIFY</button>
+      </div>
+      <div>
+        <button class="open" onClick="showAboutUs()">
+          About Us</button>
+        <button class="open" onClick="showDownload()" id="download">
+          Coming soon</button>
+      </div>
+    </nav>
+
+    <div id="download">
+      <div class="download-info">
+        <button class="close"
+        onClick="hideDownload()">Close</button>
+      </div>
+      <img src="./assets/download_bg.jpg" class="download-img"/>
+      <span>Pending Amazon certification approval</span>
+    </div>
+
+    <div id="about-us">
+      <div class="about-us-nav">
+        <button class="close"
+        onClick="hideAboutUs()">Close</button>
+      </div>
+
+      <div class="personal-info">
+        <section class="personal">
+          <img src="./assets/stephen_achurra.jpg"
+            style="max-height: 250px; width: 250px; object-fit:cover; margin-top: 30px;"/>
+            <h3 class="about-us-name">Stephen Achurra</h3>
+          <p id="about-us-info">Discovered programming where the possibilities for making impactful and lasting solutions are limitless.</p>
+          <div class="personal-links">
+            <a href="https://github.com/s-achurra">
+              <img src="./assets/github_icon.png" class="github"></i></a>
+            <a href="https://www.linkedin.com/in/stephen-achurra/">
+              <img src="./assets/linkedin_icon.png" class="linkedin"></i></a>
+          </div>
+        </section>
+
+        <section class="personal">
+          <img src="./assets/gary_yeh.jpg" class="about-us-pic"/>
+          <h3 class="about-us-name">Gary Yeh</h3>
+          <p id="about-us-info">Full-stack software engineer passionate about solving complex problems and building cool user experiences.</p>
+          <div class="personal-links">
+            <a href="https://github.com/garyeh">
+              <img src="./assets/github_icon.png" class="github"></i></a>
+            <a href="https://www.linkedin.com/in/gary-yeh/">
+              <img src="./assets/linkedin_icon.png" class="linkedin"></i></a>
+          </div>
+        </section>
+
+        <section class="personal">
+          <img src="./assets/jon_jaffe.jpg" class="about-us-pic"/>
+          <h3 class="about-us-name">Jon Jaffe</h3>
+          <p id="about-us-info">Your every day, run of the mill software engineer/standup comedian.</p>
+          <div class="personal-links">
+            <a href="https://github.com/jonjaffe">
+              <img src="./assets/github_icon.png" class="github"></i></a>
+            <a href="https://www.linkedin.com/in/jonjaffe1/">
+              <img src="./assets/linkedin_icon.png" class="linkedin"></i></a>
+          </div>
+        </section>
+
+        <section class="personal">
+          <img src="./assets/miriam_lau.jpg" class="about-us-pic"/>
+          <h3 class="about-us-name">Miriam Lau</h3>
+          <p id="about-us-info">A mad scientist turned full-stack software engineer who enjoys solving challenging puzzles.</p>
+          <div class="personal-links">
+            <a href="https://github.com/miriam-lau">
+              <img src="./assets/github_icon.png" class="github"></i></a>
+            <a href="https://www.linkedin.com/in/meiyen-miriam-lau-b7660218/"/>
+              <img src="./assets/linkedin_icon.png" class="linkedin"></i></a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="main" class="visible">
+      <section class="splash">
+        <div class="title">
+          <p>WHAT IS</p>
+          <h2>VERIFY?</h2>
+          <p>An application for the Amazon Echo to help users set and check reminders</p>
+        </div>
+        <iframe src="https://www.youtube.com/embed/CqYUIJsRTwU?ecver=2" class="demo" frameborder="0" allowfullscreen></iframe>
+      </section>
+
+      <section class="info">
+        <p>
+          Verify is an Amazon Echo application that utilizes voice detection technology, allowing users to create, check, or remove a reminder, so users will never forget. Voice input from the user triggers our custom functions, which interact with the database and return customized responses.
+        </p>
+
+        <p>
+          Amazon Echo is a hands-free speaker you control with your voice. Echo connects to the Alexa Voice Service to play music, make calls, send and receive messages, provide information, news, sports scores, weather, and more—instantly. All you have to do is ask.
+          When you want to use Echo, just say the wake word “Alexa” and Echo responds instantly.
+        </p>
+      </section>
+
+      <section class="samples">
+        <div>“Alexa, open Verify”</div>
+        <div>“Alexa, set new Verify”</div>
+        <div>“Alexa, create new Verify”</div>
+        <div>“Alexa, when did I last Verify?“</div>
+        <div>“Alexa, remove last Verify.“</div>
+        <div>“Alexa, ask Verify - help!“</div>
+      </section>
+    </div>
+
+    <footer>
+      <p>Copyright © 2017 Verify. All rights reserved.</p>
+    </footer>
+
+  </body>
+</html>

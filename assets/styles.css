@@ -1,0 +1,323 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #4d4d4d;
+  color: white;
+  padding-right: 3px;
+}
+
+nav > button, .open {
+  padding: 10px;
+  margin: 0 20px;
+}
+
+nav > button:hover {
+  text-decoration: underline;
+}
+
+.homeLink {
+  margin-left: 30px;
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 900;
+  transition: all 0.2s ease-in-out;
+}
+
+.homeLink:hover {
+  color: #e6e6e6;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/*add width, position:absolute and top*/
+footer {
+  display: flex;
+  background-color: #020621;
+  color: white;
+  padding: 30px 0;
+  font-size: 12px;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+footer > p {
+  margin-right: 30px;
+}
+
+.splash, div#about-us {
+  display: flex;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  height: 500px;
+}
+
+
+.splash > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-bottom: 1px solid black;
+}
+
+.title {
+  width: 35%;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+}
+
+.title > p:first-child {
+  margin: 20px 0;
+  font-size: 25px;
+  letter-spacing: 10px;
+  font-weight: 900;
+}
+
+.title > h2 {
+  margin: 20px 0;
+  font-size: 75px;
+  letter-spacing: 12px;
+  font-weight: 100;
+}
+
+.title > p:last-child {
+  margin: 60px 30px 30px 30px;
+  line-height: 35px;
+  font-style: italic;
+  text-align: center;
+  font-size: 22.5px;
+}
+
+.demo {
+  width: 65%;
+  height: 501px;
+}
+
+/*add position:absolute and top*/
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-flow: row wrap;
+  position: absolute;
+  width: 100%;
+  top: 570;
+  min-height: 210px;
+  margin-bottom: 30px;
+}
+
+.info > p {
+  margin: 10px 0;
+  font-size: 20px;
+  width: 80%;
+}
+
+/*add position:absolute and top*/
+.samples {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  position: absolute;
+  top: 810px;
+  height: 210px;
+  margin-bottom: 30px;
+}
+
+.samples > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 50px;
+  margin: 0 30px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #e6e6e6;
+  font-style: italic;
+  font-weight: 900;
+  position: relative;
+}
+
+.samples > div:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 10px;
+  width: 0;
+  height: 0;
+
+  border-top: 10px solid transparent;
+  border-right: 15px solid #e6e6e6;
+  border-bottom: 10px solid transparent;
+}
+
+div#about-us {
+  display: block;
+  height: 990px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+div#about-us.visible {
+  display: block;
+  background-color: white;
+  opacity: 1;
+  z-index: 1;
+}
+
+div#download {
+  position: absolute;
+  display: flex;
+  height: 800px;
+  opacity: 0;
+  transition: opacity 1s;
+  right: 0;
+  left: 0;
+  background-color: white;
+}
+
+div#download.visible {
+  opacity: 1;
+  z-index: 1;
+}
+
+.download-img {
+  position: absolute;
+  height: 990px;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+#download > span:last-child {
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  display: inline-block;
+  font-size: 30px;
+  width: 100%;
+  z-index: 1;
+}
+
+div#main {
+  display: block;
+  height: 990px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+div#main.visible {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  height: 990px;
+  opacity: 1;
+  z-index: 1;
+}
+
+.open {
+  cursor: pointer;
+}
+
+.open:hover {
+  text-decoration: underline;
+}
+
+.close {
+  font-size: 16px;
+  font-weight: 900;
+  padding: 5px;
+  /*background-color: white;*/
+  margin-top: 20px;
+  margin-right: 2%;
+  cursor: pointer;
+  /*border: 1px solid black;
+  border-radius: 5px;*/
+}
+
+.close:hover {
+  color: red;
+}
+
+.about-us-nav, .download-info {
+  width: 100%;
+  text-align: right;
+  padding-bottom: 10px;
+}
+
+.personal-info {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+}
+
+.personal {
+  width: 23%;
+  text-align: center;
+  border: 3px solid #808080;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 600px;
+  background: gray; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#C0C0C0, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#C0C0C0, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#C0C0C0, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#C0C0C0, white); /* Standard syntax (must be last) */
+}
+
+.about-us-name {
+  font-size: 35px;
+  font-weight: 900;
+  padding-top: 20px;
+}
+
+.about-us-pic {
+  height: 250px;
+  max-width: 250px;
+  object-fit: cover;
+  margin-top: 30px;
+}
+
+#about-us-info {
+  margin: 30px 40px;
+  height: 100px;
+}
+
+.personal-links > a {
+  margin: 0 20px;
+}
+
+.github {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.linkedin {
+  width: 40px;
+  height: 40px;
+  margin-left: 30px;
+  cursor: pointer;
+  align-self: center;
+}
+
+#download:hover {
+  text-decoration: none;
+  cursor: default;
+}
